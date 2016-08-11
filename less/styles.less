@@ -1,0 +1,45 @@
+@import "variables.less";
+
+
+body {
+  font-family: @font-base;
+  font-size: @base-font-size;
+  color: @text-color;
+  background-color: @light-color;
+}
+
+.clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: @max-w-container;
+}
+
+.wrap {
+  margin: 0 @wrap-out;
+}
+
+/* Header */
+.header-main {
+  background-color: @bg-color;
+}
+
+.header-logo {
+  float: left;
+  
+  a {
+    display: inline-block;
+  }
+}
+
+.header-title {
+  float: right;
+  padding: 10px;
+  font-size: @middle-font-size;
+}
