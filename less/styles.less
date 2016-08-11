@@ -38,8 +38,67 @@ body {
   }
 }
 
+/* Slider */
+.slider-content {
+  min-height: 350px;
+  background-color: lighten(@brand-color, 45%);
+}
+
 .header-title {
   float: right;
   padding: 10px;
   font-size: @middle-font-size;
+}
+
+/* Main Navigation */
+.main-nav {
+  background-color: @bg-color;
+  
+  ul {
+    .ul-clear();
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    
+    &:hover {
+      li.active {
+        a {
+        background-color: transparent;
+          
+          &:hover {
+            background-color: @brand-color;
+          }
+        }
+      }
+    }
+  }
+  
+  li {
+    webkit-flex-grow: 1;
+       -ms-flex-grow: 1;
+           flex-grow: 1;
+    position: relative;
+    
+    &.active {
+      a {
+        background-color: @brand-color;
+      }
+    }
+  }
+  
+  a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: @nav-font-size;
+    
+    &:hover {
+      background-color: @brand-color;
+    }
+    
+    &:active {
+      color: @light-color;
+    }
+  }
 }
