@@ -55,7 +55,7 @@ a:active {
   list-style: none;
 }
 .main-nav ul:hover li.active a {
-  background-color: transparent;
+  background-color: #dcdcdc;
 }
 .main-nav ul:hover li.active a:hover {
   color: #ffffff;
@@ -63,15 +63,58 @@ a:active {
 }
 .main-nav li {
   display: inline-block;
+  position: relative;
+  margin-left: -4px;
 }
 .main-nav li.active a {
+  background-color: #a9a9a9;
+}
+.main-nav li.drop-menu:hover > .submenu {
+  opacity: 1;
+  left: 4px;
+  transition: 0.5s opacity;
+}
+.main-nav li.drop-menu:hover::after {
+  transform: scaleY(-1);
+}
+.main-nav li.drop-menu::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-style: none;
+}
+.main-nav li > .submenu {
+  position: absolute;
+  width: 100%;
+  left: -99999px;
+  opacity: 0;
+}
+.main-nav li > .submenu li {
+  display: block;
+  width: 100%;
+}
+.main-nav li > .submenu a {
+  display: block;
+  width: auto;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #a9a9a9;
+}
+.main-nav li > .submenu a:hover {
   background-color: #a9a9a9;
 }
 .main-nav a {
   display: inline-block;
   padding: 10px 50px;
   text-decoration: none;
-  text-align: center;
   font-size: 18px;
 }
 .main-nav a:hover {
