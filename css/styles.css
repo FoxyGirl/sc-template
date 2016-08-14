@@ -183,6 +183,16 @@ a:active {
 .catalog-info .year {
   color: #808080;
 }
+/* Footer */
+.main-footer {
+  background-color: #dcdcdc;
+}
+.main-footer p {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 10px;
+}
 @media screen and (max-width: 979px) {
   .catalog {
     max-width: 720px;
