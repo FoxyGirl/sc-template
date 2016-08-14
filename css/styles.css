@@ -128,25 +128,19 @@ a:active {
 .main h1,
 .main h2,
 .main h3 {
+  margin-top: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-weight: 300;
   text-transform: capitalize;
 }
 .page-title {
   background-color: #dcdcdc;
 }
-.page-title h1 {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
 /* Catalog */
 .catalog {
   font-size: 0;
   margin-top: 40px;
-}
-@media screen and (max-width: 959px) {
-  .catalog {
-    text-align: center;
-  }
 }
 .catalog-item {
   display: inline-block;
@@ -167,11 +161,14 @@ a:active {
   font-size: 0;
   line-height: 1;
 }
+.catalog-img img {
+  width: 218px;
+}
 .catalog-content {
   padding: 10px;
 }
 .catalog-title {
-  min-height: 40px;
+  min-height: 50px;
 }
 .catalog-title h3 {
   margin: 0 0 10px 0;
@@ -179,15 +176,34 @@ a:active {
 .catalog-title h3 a {
   text-decoration: none;
 }
-.catalog-info span::after {
-  content: '|';
+.catalog-info span {
   display: inline-block;
-  margin-left: 6px;
-  margin-right: 3px;
-}
-.catalog-info span:last-child::after {
-  display: none;
+  margin-right: 5px;
 }
 .catalog-info .year {
   color: #808080;
+}
+@media screen and (max-width: 979px) {
+  .catalog {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 740px) {
+  .catalog {
+    max-width: 540px;
+  }
+  .catalog-item {
+    width: 158px;
+  }
+  .catalog-title {
+    min-height: 50px;
+  }
+  .catalog-title h3 {
+    font-size: 18px;
+  }
+  .catalog-img img {
+    width: 158px;
+    height: auto;
+  }
 }
