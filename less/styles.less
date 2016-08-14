@@ -94,6 +94,8 @@ a {
     
     &.drop-menu {
       &:hover {
+        background-color: @brand-color;
+        
         & > .submenu {
           opacity: 1;
           left: 4px;
@@ -102,6 +104,7 @@ a {
         
         &::after {
           transform: scaleY(-1);
+          .triangle(bottom; 7px; @light-color);
         }
       }
       
@@ -110,7 +113,7 @@ a {
         position: absolute;
         top: 18px;
         right: 8px;
-        .triangle(bottom; 7px; @light-color);        
+        .triangle(bottom; 7px; @text-color);        
       }
     }
     
@@ -130,7 +133,7 @@ a {
         width: auto;
         padding: 10px 20px;
         background-color: @light-color;
-        border-top: 1px solid @brand-color;
+        border-bottom: 1px solid @brand-color;
         
         &:hover {
           background-color: @brand-color;

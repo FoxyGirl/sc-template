@@ -69,6 +69,9 @@ a:active {
 .main-nav li.active a {
   background-color: #a9a9a9;
 }
+.main-nav li.drop-menu:hover {
+  background-color: #a9a9a9;
+}
 .main-nav li.drop-menu:hover > .submenu {
   opacity: 1;
   left: 4px;
@@ -76,6 +79,14 @@ a:active {
 }
 .main-nav li.drop-menu:hover::after {
   transform: scaleY(-1);
+  width: 0;
+  height: 0;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-style: none;
 }
 .main-nav li.drop-menu::after {
   content: '';
@@ -86,7 +97,7 @@ a:active {
   height: 0;
   border-width: 7px;
   border-style: solid;
-  border-color: #ffffff;
+  border-color: #000000;
   border-left-color: transparent;
   border-right-color: transparent;
   border-bottom-style: none;
@@ -106,7 +117,7 @@ a:active {
   width: auto;
   padding: 10px 20px;
   background-color: #ffffff;
-  border-top: 1px solid #a9a9a9;
+  border-bottom: 1px solid #a9a9a9;
 }
 .main-nav li > .submenu a:hover {
   background-color: #a9a9a9;
