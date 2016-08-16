@@ -38,7 +38,11 @@ a:active {
 /* Slider */
 .slider-content {
   min-height: 350px;
+  font-size: 0;
   background-color: #ffffff;
+}
+.slider-content img {
+  width: 100%;
 }
 .header-title {
   float: right;
@@ -53,6 +57,7 @@ a:active {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 0;
 }
 .main-nav ul:hover li.active a {
   background-color: #dcdcdc;
@@ -64,7 +69,6 @@ a:active {
 .main-nav li {
   display: inline-block;
   position: relative;
-  margin-left: -4px;
 }
 .main-nav li.active a {
   background-color: #a9a9a9;
@@ -74,7 +78,7 @@ a:active {
 }
 .main-nav li.drop-menu:hover > .submenu {
   opacity: 1;
-  left: 4px;
+  left: 0;
   transition: 0.5s opacity;
 }
 .main-nav li.drop-menu:hover::after {
