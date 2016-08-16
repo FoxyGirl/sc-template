@@ -35,6 +35,11 @@ a:active {
 .header-logo a {
   display: inline-block;
 }
+.header-title {
+  float: right;
+  padding: 25px 10px 10px;
+  font-size: 21px;
+}
 /* Slider */
 .slider-content {
   min-height: 350px;
@@ -43,11 +48,6 @@ a:active {
 }
 .slider-content img {
   width: 100%;
-}
-.header-title {
-  float: right;
-  padding: 10px;
-  font-size: 21px;
 }
 /* Main Navigation */
 .main-nav {
