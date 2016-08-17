@@ -53,35 +53,35 @@ a:active {
 .main-nav {
   background-color: #dcdcdc;
 }
-.main-nav ul {
+#menu-main-menu {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0;
 }
-.main-nav ul:hover li.active a {
+#menu-main-menu:hover li.active a {
   background-color: #dcdcdc;
 }
-.main-nav ul:hover li.active a:hover {
+#menu-main-menu:hover li.active a:hover {
   color: #ffffff;
   background-color: #a9a9a9;
 }
-.main-nav li {
+#menu-main-menu li {
   display: inline-block;
   position: relative;
 }
-.main-nav li.active a {
+#menu-main-menu li.active a {
   background-color: #a9a9a9;
 }
-.main-nav li.drop-menu:hover {
+#menu-main-menu li.menu-item-has-children:hover {
   background-color: #a9a9a9;
 }
-.main-nav li.drop-menu:hover > .submenu {
+#menu-main-menu li.menu-item-has-children:hover > .sub-menu {
   opacity: 1;
   left: 0;
   transition: 0.5s opacity;
 }
-.main-nav li.drop-menu:hover::after {
+#menu-main-menu li.menu-item-has-children:hover::after {
   transform: scaleY(-1);
   width: 0;
   height: 0;
@@ -92,7 +92,7 @@ a:active {
   border-right-color: transparent;
   border-bottom-style: none;
 }
-.main-nav li.drop-menu::after {
+#menu-main-menu li.menu-item-has-children::after {
   content: '';
   position: absolute;
   top: 18px;
@@ -106,37 +106,40 @@ a:active {
   border-right-color: transparent;
   border-bottom-style: none;
 }
-.main-nav li > .submenu {
+#menu-main-menu li > .sub-menu {
   position: absolute;
-  width: 100%;
+  width: 125%;
   left: -99999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   opacity: 0;
 }
-.main-nav li > .submenu li {
+#menu-main-menu li > .sub-menu li {
   display: block;
   width: 100%;
 }
-.main-nav li > .submenu a {
+#menu-main-menu li > .sub-menu a {
   display: block;
   width: auto;
   padding: 10px 20px;
   background-color: #ffffff;
   border-bottom: 1px solid #a9a9a9;
 }
-.main-nav li > .submenu a:hover {
+#menu-main-menu li > .sub-menu a:hover {
   background-color: #a9a9a9;
 }
-.main-nav a {
+#menu-main-menu a {
   display: inline-block;
   padding: 10px 50px;
   text-decoration: none;
   font-size: 18px;
 }
-.main-nav a:hover {
+#menu-main-menu a:hover {
   color: #ffffff;
   background-color: #a9a9a9;
 }
-.main-nav a:active {
+#menu-main-menu a:active {
   color: #ffffff;
 }
 /* Main Content */

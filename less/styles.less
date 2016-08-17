@@ -68,8 +68,9 @@ a {
 /* Main Navigation */
 .main-nav {
   background-color: @bg-color;
+}
   
-  ul {
+  #menu-main-menu {
     .ul-clear();
     font-size: 0;
     
@@ -86,7 +87,7 @@ a {
 
       }
     }
-  }
+  
   
   li {
     display: inline-block;
@@ -98,11 +99,11 @@ a {
       }
     }
     
-    &.drop-menu {
+    &.menu-item-has-children {
       &:hover {
         background-color: @brand-color;
         
-        & > .submenu {
+        & > .sub-menu {
           opacity: 1;
           left: 0;
           transition: 0.5s opacity;
@@ -122,11 +123,13 @@ a {
         .triangle(bottom; 7px; @text-color);        
       }
     }
+ 
     
-    & > .submenu {
+    & > .sub-menu {
       position: absolute;
-      width: 100%;
+      width: 125%;
       left: -99999px;
+      .ul-clear();
       opacity: 0;
             
       li {
