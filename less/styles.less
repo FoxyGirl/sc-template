@@ -203,46 +203,53 @@ a {
 
 /* Catalog */
 .catalog {
-  font-size: 0;
-  margin-top: @base-margin;
+  margin: @base-margin auto 0 auto;
+  max-width: 1040px;
+  font-size: 0; 
   
   &-item {
     display: inline-block;
     vertical-align: top;
     position: relative;
     width: @sl-item_width;
-    margin: 0 @wrap-out 2*@wrap-out @wrap-out;
+    margin: 0 19px 2*@wrap-out 19px;
     font-size: @base-font-size;
-    line-height: @line-height-product-title;
-    border: 1px solid @active-color;
     background: @light-color;
     
     &:hover {
-      box-shadow: 0 3px 15px rgba(41, 52, 73, 0.4);
+      .catalog-img {
+        box-shadow: 0 3px 15px rgba(41, 52, 73, 0.4);
+      }
+      
+      .catalog-content {        
+        h3 {
+          font-weight: bold;
+        }
+      }
     }
   }
   
   &-img {    
     a {
       display: block;
+      width: 100%;
+      min-height: 238px;
       font-size: 0;
       line-height: 1;
-    }
-    
-    img {
-      width: @sl-item_width;
+      background: #fff url('../img/catalog_poster_cat.jpg') center center no-repeat;
+      background-size: cover;
     }
   }
   
   &-content {
-    padding: 10px;
+    padding: 5px;
   }
   
   &-title {
-    min-height: 50px;
     
     h3 {
-      margin: 0 0 10px 0;
+      margin: 0 0 5px 0;
+      font-size: @catalog-title-f-size;
       
       a {
         text-decoration: none;
@@ -254,6 +261,7 @@ a {
     span {
       display: inline-block;
       margin-right: 5px;
+      font-size: @catalog-info-f-size;
     }
     
     .year {
@@ -274,35 +282,24 @@ a {
   }
 }
 
-@media screen and (max-width: 979px) {
+/* Responsive */
+
+@media screen and (max-width: 1046px) {
   .catalog {
-    max-width: 720px;
-    margin: 0 auto;    
+    max-width: 832px;
+  }
+}
+
+@media screen and (max-width: 843px) {
+  .catalog {
+   max-width: 624px;
   }
 
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 635px) {
   .catalog {
-    max-width: 540px;
+    max-width: 416px;
+  }
+}
   
-    &-item {
-      width: 158px;
-    }
-    
-    &-title {
-    min-height: 50px;
-    
-      h3 {
-        font-size: @nav-font-size;
-      }
-    }
-
-    &-img {
-      img {
-        width: 158px;
-        height: auto;
-      }
-    }
-  }
-}
