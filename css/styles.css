@@ -189,6 +189,7 @@ a:active {
 .page-title h1,
 .page-title h2 {
   margin: 0;
+  font-size: 32px;
 }
 .content {
   margin-top: 30px;
@@ -200,6 +201,7 @@ a:active {
 .sidebar {
   float: left;
   width: 200px;
+  margin-top: 30px;
 }
 .sidebar-menu ul {
   margin: 0;
