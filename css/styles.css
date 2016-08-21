@@ -155,6 +155,9 @@ a:active {
   font-weight: 300;
   text-transform: capitalize;
 }
+.main.page-catalog .catalog {
+  padding-left: 208px;
+}
 .page-title {
   margin-top: 30px;
   background-color: #dcdcdc;
@@ -168,6 +171,11 @@ a:active {
 }
 .content h2 {
   margin-top: 0;
+}
+/* Sidebar */
+.sidebar {
+  float: left;
+  width: 200px;
 }
 /* Catalog */
 .catalog {
