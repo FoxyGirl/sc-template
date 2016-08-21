@@ -87,6 +87,25 @@ a {
             background-color: @brand-color;
           }
         }
+        
+        &:hover {
+          a {
+            color: @light-color;
+            background-color: @brand-color;
+          }
+        }
+        
+        & > .sub-menu {
+          a {
+            color: @text-color;
+            background-color: @light-color;
+            
+            &:hover {
+              color: @light-color;
+              background-color: @brand-color;
+            }
+          }
+        }
 
       }
     }
@@ -109,6 +128,7 @@ a {
         & > .sub-menu {
           opacity: 1;
           left: 0;
+          z-index: 50;
           transition: 0.5s opacity;
         }
         
@@ -211,6 +231,27 @@ a {
 .sidebar {
   float: left;
   width: 200px;
+  
+  &-menu {
+    ul {
+      .ul-clear();
+    
+      a {
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: @text-color;
+        background-color: @light-color;
+        border-bottom: 1px solid @text-color;
+
+        &:hover {
+          color: @light-color;
+          background-color: @brand-color;
+        }
+      }
+    }
+  }
+
 }
 
 /* Catalog */

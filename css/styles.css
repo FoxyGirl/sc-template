@@ -69,6 +69,18 @@ a:active {
   color: #ffffff;
   background-color: #a9a9a9;
 }
+#menu-main-menu:hover li.active:hover a {
+  color: #ffffff;
+  background-color: #a9a9a9;
+}
+#menu-main-menu:hover li.active > .sub-menu a {
+  color: #000000;
+  background-color: #ffffff;
+}
+#menu-main-menu:hover li.active > .sub-menu a:hover {
+  color: #ffffff;
+  background-color: #a9a9a9;
+}
 #menu-main-menu li {
   display: inline-block;
   position: relative;
@@ -82,6 +94,7 @@ a:active {
 #menu-main-menu li.menu-item-has-children:hover > .sub-menu {
   opacity: 1;
   left: 0;
+  z-index: 50;
   transition: 0.5s opacity;
 }
 #menu-main-menu li.menu-item-has-children:hover::after {
@@ -176,6 +189,23 @@ a:active {
 .sidebar {
   float: left;
   width: 200px;
+}
+.sidebar-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-menu ul a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
+}
+.sidebar-menu ul a:hover {
+  color: #ffffff;
+  background-color: #a9a9a9;
 }
 /* Catalog */
 .catalog {
